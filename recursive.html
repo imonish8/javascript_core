@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rescursive</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let user = {
+        name : "Monish",
+        address : {
+            personal : {
+                city : "dehradun",
+                area : "Majra"
+            },
+            office : {
+                city: "Hyderbad",
+                area: "Hitech City",
+            }
+        }
+    }
+    // write a function to take this object User which is a Nested Hirarchy
+
+    let magic = (obj, parent) => {
+        for (let key in obj ){
+            if(typeof obj[key] === 'object'){
+                magic(obj[key], parent + "_" + key)
+            }
+            else{
+                finalObj[parent + "_" + key]= obj[key];
+            }
+        }
+        magic(user, "user")
+    }
+    // use this approach for any type of Nested Loop or Coding !
+</script>
+</html>

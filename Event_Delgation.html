@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            padding: 10px solid black;
+        }
+        li{
+            border: 3px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <ul id="category">
+            <li id="laptops"> Laptops</li>
+            <li id="cameras"> Cameras</li>
+            <li id="shoes"> Shoes</li>
+        </ul>
+    </div>
+</body>
+<script>
+document.querySelector("#category")
+.addEventListener('click', (e) => {
+    console.log(e.target.id)
+}) // we recieve e in call back method.
+// redirecting user to some specific page using ID #
+window.location.href = "/" + e.target.id;
+</script>
+</html>
